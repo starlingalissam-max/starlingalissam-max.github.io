@@ -1,0 +1,1020 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Alissa Starling</title>
+<meta name="description" content="Alissa Starling, MBA candidate in marketing, customer insights and business strategy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style>
+/* Layout: one left-aligned editorial column (max 1080px), asymmetric hero, case studies as a label rail + reading column. */
+:root {
+  --paper: #FBF9F7;
+  --surface: #FFFFFF;
+  --sand: #F3ECE8;
+  --ink: #221F20;
+  --muted: #675F62;
+  --line: #E4DBD7;
+  --accent: #7A4B5E;
+  --accent-soft: #F4EAEE;
+  --on-accent: #FFFFFF;
+  --display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --body: "Hanken Grotesk", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --wrap: 1080px;
+  --read: 680px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #191617; --surface: #211D1F; --sand: #2A2427; --ink: #F1EBE9; --muted: #A9A0A3;
+    --line: #3A3335; --accent: #D9A7BA; --accent-soft: #34282D; --on-accent: #1E1A1C; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #191617; --surface: #211D1F; --sand: #2A2427; --ink: #F1EBE9; --muted: #A9A0A3;
+  --line: #3A3335; --accent: #D9A7BA; --accent-soft: #34282D; --on-accent: #1E1A1C; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--body); font-size: 17px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-inline: clamp(16px, 5vw, 40px); }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.15; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.eyebrow {
+  font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent);
+}
+.muted { color: var(--muted); }
+
+.skip { position: absolute; left: 12px; top: -60px; z-index: 30; background: var(--accent); color: var(--on-accent); padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+.skip:focus { top: calc(10px + env(safe-area-inset-top, 0px)); }
+main:focus, h1:focus { outline: none; }
+/* Header */
+.site-head {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  backdrop-filter: saturate(1.2) blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+.site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; flex-wrap: wrap; }
+.mark { font-family: var(--display); font-size: 21px; text-decoration: none; letter-spacing: -.01em; }
+.mark span { color: var(--accent); }
+nav ul { list-style: none; display: flex; gap: clamp(14px, 3vw, 30px); margin: 0; padding: 0; flex-wrap: wrap; }
+nav a { text-decoration: none; font-size: 15px; color: var(--muted); padding-block: 4px; border-bottom: 1px solid transparent; }
+nav a:hover, nav a[aria-current="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+
+/* Buttons */
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+  font-size: 15.5px; font-weight: 500; padding: 12px 22px; border-radius: 999px;
+  border: 1px solid var(--accent); transition: background .15s, color .15s;
+}
+.btn-primary { background: var(--accent); color: var(--on-accent); }
+.btn-primary:hover { background: color-mix(in srgb, var(--accent) 86%, var(--ink)); }
+.btn-ghost { color: var(--accent); background: transparent; }
+.btn-ghost:hover { background: var(--accent-soft); }
+
+/* Hero */
+.hero { padding-block: clamp(56px, 9vw, 112px) clamp(48px, 7vw, 88px); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 80px); align-items: end; }
+.hero-grid { grid-template-areas: "text photo" "text now"; grid-template-rows: auto auto; row-gap: 36px; }
+.hero-text { grid-area: text; align-self: end; }
+.hero-now { grid-area: now; }
+.hero-photo { grid-area: photo; position: relative; margin: 0; width: min(100%, 300px); justify-self: start; align-self: end; isolation: isolate; }
+.hero-photo::before { content: ""; position: absolute; inset: 18px -18px -18px 18px; border-radius: 999px 999px 10px 10px; background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--line)); z-index: -1; }
+.hero-photo img { display: block; width: 100%; height: auto; filter: drop-shadow(0 18px 28px rgba(34, 31, 32, .12)); }
+.hero h1 { font-size: clamp(46px, 7.4vw, 88px); letter-spacing: -.02em; line-height: 1.02; }
+.hero h1.headline { font-size: clamp(38px, 5.6vw, 66px); line-height: 1.06; max-width: 16ch; }
+.hero .role { margin-top: 18px; font-size: clamp(17px, 1.9vw, 20px); font-weight: 500; }
+.hero .intro { margin-top: 22px; max-width: 54ch; color: var(--muted); font-size: 18px; }
+.hero .btns { margin-top: 34px; }
+.now {
+  border-top: 1px solid var(--ink); padding-top: 18px; display: grid; gap: 18px; font-size: 15px;
+}
+.now dt { font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.now dd { margin: 4px 0 0; }
+.path { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: 14.5px; }
+.path span:not(.arr) { white-space: nowrap; }
+.path .arr { color: var(--accent); }
+.path .end { color: var(--accent); font-weight: 600; }
+
+/* Sections */
+section.block { padding-block: clamp(56px, 8vw, 96px); border-top: 1px solid var(--line); }
+.sec-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 24px 48px; align-items: end; margin-bottom: clamp(32px, 5vw, 52px); }
+.sec-head h2 { font-size: clamp(32px, 4.4vw, 46px); letter-spacing: -.01em; margin-top: 10px; }
+.sec-head p { color: var(--muted); max-width: 52ch; }
+
+/* What I bring */
+.bring { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--ink); }
+.bring > div { padding: 22px 22px 6px 0; }
+.bring > div + div { padding-left: 22px; border-left: 1px solid var(--line); }
+.bring h3 { font-size: 23px; margin-bottom: 10px; }
+.bring p { font-size: 15.5px; color: var(--muted); }
+
+/* Work */
+.work { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px; }
+.card {
+  grid-column: span 3; display: flex; flex-direction: column; text-decoration: none;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 6px; overflow: hidden;
+  transition: border-color .15s, transform .15s;
+}
+a.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.card.feature { grid-column: span 6; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
+.card.soon { grid-column: span 6; background: transparent; border-style: dashed; flex-direction: row; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; flex-wrap: wrap; }
+.card .thumb {
+  aspect-ratio: 16 / 9; max-width: 100%; background: var(--sand); display: flex; align-items: flex-end; padding: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.card.feature .thumb { aspect-ratio: auto; min-height: 280px; border-bottom: 0; border-right: 1px solid var(--line); }
+.thumb .glyph { font-family: var(--display); font-style: italic; font-size: clamp(30px, 4vw, 44px); color: var(--accent); line-height: 1; }
+.card .body { padding: 24px 26px 26px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.card.feature .body { padding: clamp(26px, 4vw, 44px); justify-content: center; }
+.meta { font-size: 13.5px; color: var(--muted); }
+.card h3 { font-size: clamp(25px, 2.6vw, 30px); }
+.card.feature h3 { font-size: clamp(28px, 3.4vw, 38px); }
+.card p.sum { color: var(--muted); font-size: 16px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.tags li { font-size: 13px; padding: 4px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--ink); }
+.more { margin-top: auto; padding-top: 6px; font-size: 15px; font-weight: 600; color: var(--accent); }
+.soon h3 { font-size: 24px; }
+
+/* Resume & contact */
+.duo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+.panel { background: var(--sand); border-radius: 6px; padding: clamp(26px, 4vw, 44px); display: flex; flex-direction: column; gap: 18px; }
+.panel h2 { font-size: clamp(30px, 3.6vw, 40px); }
+.snap { display: grid; gap: 12px; font-size: 15px; margin: 0; }
+.snap dt { font-weight: 600; }
+.snap dd { margin: 2px 0 0; color: var(--muted); }
+.links { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.links li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding-block: 14px; border-top: 1px solid var(--line); flex-wrap: wrap; }
+.links li:last-child { border-bottom: 1px solid var(--line); }
+.links .k { font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.links a, .links .v { font-size: 16px; overflow-wrap: anywhere; }
+.copy { font: inherit; font-size: 13px; color: var(--accent); background: none; border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; cursor: pointer; margin-left: 8px; }
+
+footer { border-top: 1px solid var(--line); padding-block: 28px; font-size: 14px; color: var(--muted); }
+footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+/* Case study */
+.cs-head { padding-block: clamp(40px, 7vw, 80px) clamp(32px, 5vw, 52px); }
+.back { font-size: 14.5px; color: var(--muted); text-decoration: none; }
+.back:hover { color: var(--accent); }
+.cs-head .eyebrow { margin-top: 32px; display: block; }
+.cs-head h1 { font-size: clamp(38px, 5.6vw, 64px); letter-spacing: -.015em; margin-top: 12px; max-width: 18ch; }
+.cs-head .sub { font-family: var(--display); font-style: italic; font-size: clamp(20px, 2.4vw, 25px); color: var(--muted); margin-top: 14px; }
+.note { margin-top: 22px; font-size: 14.5px; color: var(--muted); padding-left: 14px; border-left: 2px solid var(--accent); max-width: 62ch; }
+.glance { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 1px solid var(--ink); margin-top: clamp(32px, 5vw, 48px); }
+.glance > div { padding: 18px 18px 18px 0; }
+.glance > div + div { padding-left: 18px; border-left: 1px solid var(--line); }
+.glance .n { font-family: var(--display); font-size: clamp(30px, 3.6vw, 42px); line-height: 1; font-variant-numeric: tabular-nums; }
+.glance .t { font-size: 14px; color: var(--muted); margin-top: 8px; }
+.glance .w { font-size: 15.5px; font-weight: 500; }
+
+.cs-sec { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 16px 48px; padding-block: clamp(32px, 4.5vw, 48px); border-top: 1px solid var(--line); }
+.cs-sec:first-of-type { border-top: 0; }
+.cs-sec > h2 { font-family: var(--body); font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); padding-top: 6px; }
+.cs-sec .content { max-width: var(--read); display: grid; gap: 18px; min-width: 0; }
+.content p { font-size: 17.5px; }
+.content .lede { font-family: var(--display); font-size: clamp(22px, 2.5vw, 27px); line-height: 1.35; }
+.content ul { margin: 0; padding-left: 0; list-style: none; display: grid; gap: 10px; }
+.content ul li { padding-left: 20px; position: relative; }
+.content ul li::before { content: ""; position: absolute; left: 0; top: .72em; width: 8px; height: 1px; background: var(--accent); }
+.content ul.tags { display: flex; gap: 6px; }
+.content ul.tags li { padding: 4px 10px; }
+.content ul.tags li::before { content: none; }
+.content ul.contrib { gap: 0; border-top: 1px solid var(--ink); }
+.content ul.contrib li { padding: 12px 0 12px 28px; border-bottom: 1px solid var(--line); font-size: 17px; }
+.content ul.contrib li::before { content: "✓"; width: auto; height: auto; background: none; color: var(--accent); top: 12px; font-weight: 600; }
+.insights { display: grid; gap: 0; counter-reset: ins; }
+.insights div { padding-block: 18px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 4px 12px; }
+.insights div:last-child { border-bottom: 1px solid var(--line); }
+.insights .num { font-family: var(--display); font-size: 26px; color: var(--accent); line-height: 1.1; grid-row: span 2; }
+.insights h3 { font-family: var(--body); font-size: 17.5px; font-weight: 600; line-height: 1.4; }
+.insights p { color: var(--muted); font-size: 16.5px; }
+
+.tbl { overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 15.5px; }
+th, td { text-align: left; padding: 13px 16px; vertical-align: top; border-top: 1px solid var(--line); }
+thead th { border-top: 0; font-size: 12.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); background: var(--sand); }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr.win td { background: var(--accent-soft); font-weight: 600; }
+tr.win td.num { color: var(--accent); }
+
+.content .pull { font-family: var(--display); font-size: clamp(23px, 2.7vw, 30px); line-height: 1.3; padding-block: 6px; color: var(--ink); }
+.content .pull em { color: var(--accent); }
+
+.ph {
+  border: 1px dashed color-mix(in srgb, var(--accent) 45%, var(--line)); border-radius: 6px;
+  background: repeating-linear-gradient(135deg, transparent 0 10px, var(--accent-soft) 10px 11px);
+  min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 4px; padding: 22px 24px;
+}
+.ph .k { font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.ph .v { font-family: var(--display); font-size: 21px; }
+.ph-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.ph-grid .ph { min-height: 140px; }
+
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px; display: grid; gap: 6px; align-content: start; }
+.stat .n { font-family: var(--display); font-size: 38px; line-height: 1; font-variant-numeric: tabular-nums; }
+.stat .k { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.stat p { font-size: 15px; color: var(--muted); }
+
+.next { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-block: 36px 72px; border-top: 1px solid var(--ink); margin-top: 24px; }
+.next a.big { font-family: var(--display); font-size: clamp(24px, 3vw, 32px); text-decoration: none; }
+.next a.big:hover { color: var(--accent); }
+
+/* About */
+.about-hero { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 80px); padding-block: clamp(48px, 8vw, 96px) clamp(40px, 6vw, 64px); align-items: start; }
+.about-hero h1 { font-size: clamp(40px, 5.6vw, 64px); letter-spacing: -.015em; margin-top: 12px; }
+.story { display: grid; gap: 20px; margin-top: 28px; max-width: 60ch; }
+.story p { font-size: 18px; }
+.story p:first-child { font-family: var(--display); font-size: clamp(22px, 2.5vw, 26px); line-height: 1.4; }
+.roles { background: var(--sand); border-radius: 6px; padding: 28px; display: grid; gap: 16px; align-content: start; }
+.roles p { font-size: 15.5px; color: var(--muted); }
+.roles ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.roles li { font-size: 14.5px; padding: 6px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); }
+
+.job { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 12px 48px; padding-block: 28px; border-top: 1px solid var(--line); }
+.job .when { font-size: 14.5px; color: var(--muted); padding-top: 4px; }
+.job h3 { font-size: 26px; }
+.job .where { color: var(--muted); font-size: 15.5px; margin-top: 4px; }
+.job .content { margin-top: 16px; max-width: var(--read); }
+.job.small h3 { font-size: 22px; }
+.edu { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.edu > div { border-top: 1px solid var(--ink); padding-top: 18px; display: grid; gap: 4px; align-content: start; }
+.edu h3 { font-size: 24px; }
+.course { margin-top: 24px; }
+.course .tags li, .skills li { background: var(--surface); border: 1px solid var(--line); }
+.skills { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.skills li { font-size: 15px; padding: 7px 14px; border-radius: 999px; }
+.tools { margin-top: 18px; font-size: 14.5px; color: var(--muted); }
+
+
+/* Resume view */
+.cv { padding-block: clamp(32px, 6vw, 64px) 72px; }
+.cv-head { display: flex; justify-content: space-between; align-items: end; gap: 12px 32px; flex-wrap: wrap; margin-block: 24px 28px; }
+.cv-head h1 { font-size: clamp(34px, 4.6vw, 52px); margin-top: 10px; }
+.cv-actions { display: grid; gap: 8px; justify-items: start; }
+.dl-msg { font-size: 14px; min-height: 1em; }
+.dl-msg:empty { display: none; }
+.sheet { margin: 0; background: #FFFFFF; border: 1px solid var(--line); border-radius: 4px; padding: clamp(6px, 2vw, 18px); box-shadow: 0 1px 2px rgba(34, 31, 32, .06), 0 12px 32px -16px rgba(34, 31, 32, .18); max-width: 900px; }
+.sheet img { display: block; width: 100%; height: auto; max-width: 100%; }
+
+/* Project visuals */
+.fig { margin: 0; display: grid; gap: 10px; min-width: 0; }
+.zoom { display: block; width: 100%; padding: 0; margin: 0; border: 1px solid var(--line); border-radius: 6px; background: #FFFFFF; overflow: hidden; cursor: zoom-in; position: relative; font: inherit; }
+.zoom img { display: block; width: 100%; height: auto; }
+.zoom::after { content: "Enlarge ⤢"; position: absolute; right: 10px; bottom: 10px; font-size: 12.5px; font-weight: 600; letter-spacing: .02em; padding: 4px 10px; border-radius: 999px; background: color-mix(in srgb, var(--ink) 78%, transparent); color: var(--paper); opacity: 0; transition: opacity .15s; pointer-events: none; }
+.zoom:hover { border-color: var(--accent); }
+.zoom:hover::after, .zoom:focus-visible::after { opacity: 1; }
+.fig figcaption { font-size: 14.5px; color: var(--muted); line-height: 1.5; max-width: 72ch; }
+.fig figcaption::after { content: " Click the image to enlarge."; }
+@media (hover: none) { .fig figcaption::after { content: " Tap the image to enlarge."; } }
+.cs-wide { grid-column: 1 / -1; display: grid; gap: 28px; min-width: 0; }
+.fig-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.hero-shot { margin-bottom: clamp(16px, 3vw, 28px); }
+.feature-fig { border: 1px solid color-mix(in srgb, var(--accent) 55%, var(--line)); background: var(--accent-soft); border-radius: 8px; padding: clamp(16px, 3vw, 30px); display: grid; gap: 20px; }
+.feature-fig h3 { font-size: clamp(24px, 2.8vw, 30px); margin-top: 8px; }
+.feature-fig .explain { max-width: var(--read); font-size: 17.5px; }
+.feature-fig .explain strong { color: var(--accent); font-weight: 600; }
+.portrait { width: 132px; height: 132px; border-radius: 50%; display: block; object-fit: cover; }
+.lightbox { border: 0; padding: 0; margin: auto; background: transparent; max-width: 100vw; max-height: 100dvh; overflow: visible; }
+.lightbox::backdrop { background: rgba(20, 17, 18, .86); }
+.lightbox .lb-inner { display: grid; gap: 12px; justify-items: center; padding: 56px 12px 16px; }
+.lightbox img { display: block; background: #FFFFFF; border-radius: 4px; height: auto; width: min(96vw, calc((100dvh - 130px) * var(--ar, 1)), calc(var(--nw, 1000) * 1.6px)); }
+.lightbox p { color: #F1EBE9; font-size: 14.5px; max-width: 72ch; text-align: center; margin: 0; }
+.lightbox .lb-close { position: fixed; top: calc(12px + env(safe-area-inset-top, 0px)); right: 12px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,.4); background: rgba(0,0,0,.4); color: #FFFFFF; font-size: 20px; line-height: 1; cursor: pointer; }
+@media (max-width: 900px) { .fig-row { grid-template-columns: minmax(0, 1fr); } }
+.fin table { font-size: 15.5px; }
+.fin caption { caption-side: top; text-align: left; padding: 14px 16px; font-family: var(--display); font-size: 19px; border-bottom: 1px solid var(--line); }
+.fin tbody th { font-weight: 500; text-transform: none; letter-spacing: 0; font-size: 15.5px; color: var(--ink); background: transparent; }
+.fin tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--sand) 45%, var(--surface)); }
+.fin td.chg { font-weight: 600; position: relative; }
+.fin .arr { font-size: .78em; color: var(--muted); margin-right: 2px; }
+.sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.fin-fig { max-width: 820px; grid-template-columns: minmax(0, 1fr); }
+.fin-fig figcaption::after { content: none !important; }
+.fin { min-width: 0; }
+.fin tbody th { position: sticky; left: 0; z-index: 1; background: var(--surface); }
+.fin tbody tr:nth-child(even) th { background: color-mix(in srgb, var(--sand) 45%, var(--surface)); }
+@media (max-width: 560px) {
+  .fin table { font-size: 13.5px; }
+  .fin th, .fin td { padding: 10px 6px; }
+  .fin tbody th { font-size: 13.5px; }
+  .fin thead th { font-size: 12px; letter-spacing: .05em; }
+  .fin caption { font-size: 17px; padding: 12px 10px; }
+  .fin th:first-child, .fin td:first-child { padding-left: 12px; }
+  .fin th:last-child, .fin td:last-child { padding-right: 12px; }
+}
+.scroller { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 6px; }
+@media (max-width: 700px) {
+  .fig.wide-scroll .zoom { width: 680px; }
+  .fig.wide-scroll figcaption::after { content: " Swipe sideways to see the whole table, or tap it to enlarge."; }
+}
+@media (max-width: 700px) {
+  .lightbox { width: 100vw; height: 100dvh; overflow: auto; overscroll-behavior: contain; }
+  .lightbox .lb-inner { justify-items: start; width: max-content; padding-inline: 12px; }
+  .lightbox img { width: min(calc(var(--nw, 1000) * 1px), 1000px); max-width: none; }
+  .lightbox p { position: sticky; left: 12px; width: calc(100vw - 24px); text-align: left; }
+  .lightbox p::after { content: " Scroll sideways to see the full image."; color: #A9A0A3; }
+}
+/* Card illustrations (flat SVG, drawn from the palette tokens) */
+.card .thumb.has-art { position: relative; overflow: hidden; background: var(--sand); }
+.thumb .art { position: absolute; inset: 0; width: 100%; height: 100%; }
+.thumb.has-art .glyph { position: relative; z-index: 1; }
+.art .soft, .bg-art .soft { fill: var(--accent-soft); }
+.bg-art .soft2 { fill: color-mix(in srgb, var(--accent) 16%, var(--sand)); }
+.bg-art .tree path { fill: color-mix(in srgb, var(--accent) 34%, var(--sand)); }
+.art .sheet { fill: var(--surface); stroke: var(--line); stroke-width: 1.5; }
+.art .acc { fill: var(--accent); }
+.art .paper { fill: var(--sand); }
+.art .line { fill: var(--line); }
+.art .ink2 { fill: color-mix(in srgb, var(--ink) 55%, var(--surface)); }
+.art .hi { fill: var(--accent-soft); }
+.art .tick { fill: none; stroke: var(--on-accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.art .ring { fill: none; stroke: color-mix(in srgb, var(--accent) 55%, var(--line)); stroke-width: 2; }
+.art .route { fill: none; stroke: color-mix(in srgb, var(--accent) 50%, var(--sand)); stroke-width: 2.5; stroke-dasharray: 2 8; stroke-linecap: round; }
+.art .grid path { fill: none; stroke: var(--line); stroke-width: 1.2; }
+.art .outline { fill: none; stroke: color-mix(in srgb, var(--ink) 60%, var(--sand)); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.art .axis { stroke: color-mix(in srgb, var(--ink) 40%, var(--sand)); stroke-width: 1.5; }
+.art .trend { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+a.card .art > g { transition: transform .4s ease; }
+.card.soon.has-art { position: relative; overflow: hidden; }
+.card.soon .bg-art { position: absolute; right: 0; bottom: 0; width: 60%; height: 55%; opacity: .7; }
+.card.soon.has-art > div, .card.soon.has-art > p { position: relative; z-index: 1; }
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-grid, .about-hero, .sec-head, .duo { grid-template-columns: minmax(0, 1fr); }
+  .hero-grid { grid-template-areas: "photo" "text" "now"; row-gap: 32px; }
+  .hero-photo { width: min(62%, 240px); }
+  .bring { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bring > div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .bring > div:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .card, .card.feature { grid-column: span 6; }
+  .card.feature { grid-template-columns: minmax(0, 1fr); }
+  .card.feature .thumb { min-height: 0; aspect-ratio: 16 / 7; border-right: 0; border-bottom: 1px solid var(--line); }
+  .glance { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .glance > div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .glance > div:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .cs-sec, .job { grid-template-columns: minmax(0, 1fr); }
+  .stats { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .bring { grid-template-columns: minmax(0, 1fr); }
+  .bring > div, .bring > div + div { padding: 18px 0 8px; border-left: 0; }
+  .bring > div + div { border-top: 1px solid var(--line); }
+  .edu { grid-template-columns: minmax(0, 1fr); }
+  .site-head .wrap { padding-block: 10px; }
+  nav ul { gap: 14px; }
+  nav a { font-size: 14.5px; }
+}
+</style>
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="#home">Alissa Starling<span>.</span></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#home" data-nav="home">Home</a></li>
+        <li><a href="#work" data-nav="work">Projects</a></li>
+        <li><a href="#about" data-nav="about">About</a></li>
+        <li><a href="#cv" data-nav="resume">Resume</a></li>
+        <li><a href="#contact" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<!-- ============ HOME ============ -->
+<div class="view" data-view="home">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <figure class="hero-photo"><img src="img/alissa-hero.webp" alt="Portrait of Alissa Starling" width="640" height="778" decoding="async" fetchpriority="high"></figure>
+      <div class="hero-text">
+        <p class="eyebrow">Alissa Starling · MBA Candidate</p>
+        <h1 class="headline" tabindex="-1" style="margin-top:14px">Turning Research and Data Into Smarter Business Decisions.</h1>
+        <p class="role">Marketing · Business Analysis · Business Strategy</p>
+        <p class="intro">I combine market research, financial analysis, and strategic problem solving to uncover opportunities, evaluate alternatives, and develop practical business solutions.</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="#work">View My Work</a>
+          <a class="btn btn-ghost" href="#cv">View Resume</a>
+        </div>
+      </div>
+      <dl class="now hero-now">
+        <div>
+          <dt>Currently</dt>
+          <dd>MBA, William Jewell College (One Day), expected 2027</dd>
+        </div>
+        <div>
+          <dt>Background</dt>
+          <dd>BA in Business Administration, University of Washington Bothell, 2025</dd>
+        </div>
+        <div>
+          <dt>My path</dt>
+          <dd class="path">
+            <span>Customer-facing work</span><span class="arr">→</span>
+            <span>Customer research</span><span class="arr">→</span>
+            <span>Strategy &amp; analysis</span><span class="arr">→</span>
+            <span class="end">Marketing &amp; business</span>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">What I bring</p><h2>Four areas I keep coming back to</h2></div>
+        <p>Built through customer-facing work, my business degree, and my MBA.</p>
+      </div>
+      <div class="bring">
+        <div><h3>Customer Insights</h3><p>Customer discovery, interviews, identifying customer needs, and analyzing feedback for patterns.</p></div>
+        <div><h3>Marketing</h3><p>Customer communication, promotions, content, digital marketing, and understanding what an audience responds to.</p></div>
+        <div><h3>Business Strategy</h3><p>Competitive analysis, strategic frameworks, comparing options, and building recommendations.</p></div>
+        <div><h3>Analysis</h3><p>Financial analysis, Excel, market research, performance trends, and interpreting data to support decisions.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Projects</p><h2>Selected Work</h2></div>
+        <p>Case studies from my MBA and undergraduate coursework. Each one shows how I research a business problem, analyze the information, evaluate the alternatives, and turn the findings into a recommendation.</p>
+      </div>
+      <div class="work">
+        <a class="card feature" href="#readygroup">
+          <div class="thumb has-art"><svg class="art" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <circle cx="330" cy="40" r="70" class="soft"/>
+            <path d="M28 58 C 70 20, 110 80, 150 46 S 178 30, 186 34" class="route"/>
+            <g transform="translate(160 12)"><path d="M10 0 C 16 0 20 5 20 10 C 20 18 10 28 10 28 C 10 28 0 18 0 10 C 0 5 4 0 10 0 Z" class="acc"/><circle cx="10" cy="10" r="4" class="paper"/></g>
+            <g transform="translate(222 38)">
+              <rect width="150" height="132" rx="10" class="sheet"/>
+              <rect x="16" y="16" width="70" height="8" rx="4" class="ink2"/>
+              <g transform="translate(16 40)"><circle cx="7" cy="7" r="7" class="acc"/><path d="M3.5 7 l2.5 2.5 l4.5 -5" class="tick"/><rect x="22" y="3" width="82" height="7" rx="3.5" class="line"/></g>
+              <g transform="translate(16 64)"><circle cx="7" cy="7" r="7" class="acc"/><path d="M3.5 7 l2.5 2.5 l4.5 -5" class="tick"/><rect x="22" y="3" width="64" height="7" rx="3.5" class="line"/></g>
+              <g transform="translate(16 88)"><circle cx="7" cy="7" r="6" class="ring"/><rect x="22" y="3" width="74" height="7" rx="3.5" class="line"/></g>
+              <rect x="16" y="112" width="118" height="6" rx="3" class="line"/><rect x="16" y="112" width="74" height="6" rx="3" class="acc"/>
+            </g>
+          </svg><span class="glyph">ReadyGroup</span></div>
+          <div class="body">
+            <p class="meta">One Day MBA Program</p>
+            <h3>Customer Research &amp; Business Development</h3>
+            <p class="sum">Customer discovery for ReadyGroup, a coordination tool for group trip organizers. 20+ customer interviews and 30+ potential users engaged, used to validate the problem, set product priorities, and plan pricing and marketing experiments for an early MVP.</p>
+            <ul class="tags"><li>Customer Discovery</li><li>Product Strategy</li><li>Marketing Experiments</li></ul>
+            <span class="more">Read case study →</span>
+          </div>
+        </a>
+        <a class="card" href="#crescordia">
+          <div class="thumb has-art"><svg class="art" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <circle cx="345" cy="30" r="64" class="soft"/>
+            <g transform="translate(176 40)">
+              <rect width="186" height="128" rx="8" class="sheet"/>
+              <g class="grid"><path d="M0 32 H186 M0 56 H186 M0 80 H186 M0 104 H186 M62 0 V128 M100 0 V128 M138 0 V128"/></g>
+              <rect x="1" y="105" width="184" height="22" class="hi"/>
+              <rect x="12" y="12" width="38" height="7" rx="3.5" class="ink2"/>
+              <rect x="12" y="40" width="38" height="7" rx="3.5" class="line"/><rect x="12" y="64" width="30" height="7" rx="3.5" class="line"/><rect x="12" y="88" width="42" height="7" rx="3.5" class="line"/><rect x="12" y="112" width="40" height="7" rx="3.5" class="acc"/>
+              <circle cx="157" cy="116" r="6" class="acc"/>
+            </g>
+            <g transform="translate(118 92)"><path d="M14 0 H34 M18 0 V30 L2 62 C0 67 3 72 9 72 H39 C45 72 48 67 46 62 L30 30 V0" class="outline"/><path d="M8 54 H40 L46 64 C47 68 45 71 40 71 H8 C3 71 1 68 2 64 Z" class="acc"/></g>
+          </svg><span class="glyph">Crescordia</span></div>
+          <div class="body">
+            <p class="meta">University of Washington · Academic case study</p>
+            <h3>Crescordia Business Strategy</h3>
+            <p class="sum">A strategy analysis of a medical technology company facing product quality, innovation, and competitive pressure. I assessed the competitive landscape, then compared four strategic options in a multi-factor decision matrix to reach a recommendation.</p>
+            <ul class="tags"><li>Competitive Analysis</li><li>Strategic Evaluation</li><li>Decision Matrix</li></ul>
+            <span class="more">Read case study →</span>
+          </div>
+        </a>
+        <a class="card" href="#retail">
+          <div class="thumb has-art"><svg class="art" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <circle cx="340" cy="36" r="66" class="soft"/>
+            <g transform="translate(176 22)">
+              <path d="M0 132 H200" class="axis"/>
+              <rect x="14" y="72" width="26" height="60" rx="3" class="line"/>
+              <rect x="54" y="48" width="26" height="84" rx="3" class="acc"/>
+              <rect x="94" y="86" width="26" height="46" rx="3" class="line"/>
+              <rect x="134" y="62" width="26" height="70" rx="3" class="line"/>
+              <path d="M27 60 L67 34 L107 72 L147 50 L186 24" class="trend"/>
+              <circle cx="67" cy="34" r="5" class="acc"/>
+            </g>
+            <g transform="translate(116 78)"><path d="M6 18 H50 L46 74 H10 Z" class="sheet"/><path d="M18 18 V12 C18 4 38 4 38 12 V18" class="outline"/></g>
+          </svg><span class="glyph">Retail Financials</span></div>
+          <div class="body">
+            <p class="meta">University of Washington · Team project · Spring 2023</p>
+            <h3>Retail Industry Financial Analysis</h3>
+            <p class="sum">A team comparison of Walmart, Nordstrom, TJ Maxx, Gap, and Target. I analyzed Walmart: its financial summary, ratio comparisons against competitors and an industry average, and its Q4 2022 earnings call.</p>
+            <ul class="tags"><li>Financial Ratio Analysis</li><li>Comparative Research</li><li>Performance Evaluation</li></ul>
+            <span class="more">Read case study →</span>
+          </div>
+        </a>
+        <div class="card soon has-art">
+          <svg class="bg-art" viewBox="0 0 800 160" preserveAspectRatio="xMaxYMax slice" aria-hidden="true" focusable="false"><path d="M380 160 L470 70 L520 110 L590 40 L680 125 L730 90 L800 140 V160 Z" class="soft"/><path d="M520 160 L600 85 L650 120 L720 60 L800 120 V160 Z" class="soft2"/><g class="tree"><path d="M455 160 L470 118 L485 160 Z"/><path d="M490 160 L502 128 L514 160 Z"/><path d="M745 160 L760 112 L775 160 Z"/></g></svg>
+          <div>
+            <p class="meta">Independent digital marketing project · In progress</p>
+            <h3 style="margin-top:6px">PNW Bound Co.</h3>
+          </div>
+          <p class="muted" style="font-size:15.5px;max-width:44ch">An ongoing content and Pinterest marketing project. Case study coming soon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="resume">
+    <div class="wrap duo">
+      <div class="panel">
+        <p class="eyebrow">Resume</p>
+        <h2>The one-page version</h2>
+        <p class="muted">A summary of my education, experience, and project work.</p>
+        <dl class="snap">
+          <div><dt>Education</dt><dd>MBA candidate, William Jewell College (One Day) · BA Business Administration, UW Bothell (2025)</dd></div>
+          <div><dt>Experience</dt><dd>Customer-facing operations, sales, and CRM at Yuan Spa</dd></div>
+          <div><dt>Focus</dt><dd>Marketing, customer insights, and business strategy</dd></div>
+        </dl>
+        <div class="btns"><a class="btn btn-primary" href="#cv">View Resume</a><a class="btn btn-ghost dl-resume" href="Alissa_Starling_Resume.pdf" download>Download PDF</a></div>
+        <p class="dl-msg muted" role="status"></p>
+      </div>
+      <div class="panel" id="contact" style="background:transparent;border:1px solid var(--line)">
+        <p class="eyebrow">Contact</p>
+        <h2>Let’s connect</h2>
+        <p class="muted">I’m open to conversations about early-career roles in marketing, customer insights, business strategy, and related areas. The best way to reach me is by email or LinkedIn.</p>
+        <ul class="links">
+          <li><span class="k">Email</span><span><span class="v" id="email">starlingalissam@gmail.com</span><button class="copy" id="copy-email" type="button">Copy</button></span></li>
+          <li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/alissa-starling" target="_blank" rel="noopener">linkedin.com/in/alissa-starling</a></li>
+          <li><span class="k">Handshake</span><a href="https://app.joinhandshake.com/profiles/alissastarling" target="_blank" rel="noopener">Handshake profile</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ READYGROUP ============ -->
+<article class="view" data-view="readygroup" hidden>
+  <div class="wrap">
+    <header class="cs-head">
+      <a class="back" href="#work">← All projects</a>
+      <span class="eyebrow">One Day MBA Program · MBA business project</span>
+      <h1 tabindex="-1">Customer Research &amp; Business Development</h1>
+      <p class="sub">ReadyGroup: customer discovery, product strategy and marketing experiments for a group trip coordination tool</p>
+      <p class="note">ReadyGroup began as a business concept in my MBA program. I’ve since built an early MVP to test it; it hasn’t been validated with paying customers.</p>
+      <div class="glance">
+        <div><div class="n">20+</div><div class="t">customer interviews</div></div>
+        <div><div class="n">30+</div><div class="t">potential users engaged</div></div>
+        <div><div class="w">Interviews, discovery conversations, prototype feedback</div><div class="t">Methods</div></div>
+        <div><div class="w">Early MVP; willingness to pay not yet tested</div><div class="t">Stage</div></div>
+      </div>
+    </header>
+
+    <figure class="fig hero-shot"><button class="zoom" type="button" aria-label="Enlarge image: ReadyGroup landing page with the headline “Stop chasing your group” and a sample trip readiness card"><img src="img/readygroup-landing.png" alt="ReadyGroup landing page with the headline “Stop chasing your group” and a sample trip readiness card" width="975" height="577" loading="lazy" decoding="async"></button><figcaption>The landing page of the ReadyGroup MVP I built to test the concept.</figcaption></figure>
+
+    <section class="cs-sec"><h2>Problem</h2><div class="content">
+      <p class="lede">When a group travels together, one person usually ends up chasing everyone else.</p>
+      <p>The organizer collects responses, tracks who owes money, coordinates who is handling what, and sometimes fronts costs when people pay late or cancel. Most of that happens across scattered group chats. I wanted to know whether one place for RSVPs, responsibilities, payments, reminders and overall trip readiness would actually help.</p>
+    </div></section>
+
+    <section class="cs-sec"><h2>My contributions</h2><div class="content">
+      <ul class="contrib">
+        <li>Conducted customer interviews and discovery conversations: 20+ interviews, 30+ potential users engaged</li>
+        <li>Synthesized the feedback into three recurring themes</li>
+        <li>Turned those findings into product priorities and scope</li>
+        <li>Built an early MVP and set up its $12-per-trip pricing (payments in test mode)</li>
+        <li>Planned the next marketing experiments: a pricing test and a Meta lead-ad campaign</li>
+      </ul>
+    </div></section>
+
+    <section class="cs-sec"><h2>Customer discovery</h2><div class="content">
+      <p>Instead of assuming what customers wanted, I started with conversations.</p>
+      <ul>
+        <li><strong>Customer interviews</strong> to understand how people experience the problem today</li>
+        <li><strong>Discovery conversations</strong> about how organizers coordinate trips now and the tools they already use, especially group chats</li>
+        <li><strong>Prototype feedback</strong> to see how organizers reacted to the concept as I refined it</li>
+      </ul>
+      <p>Across the interviews, I separated what organizers mentioned once from what kept coming up. Three themes held up.</p>
+      <div class="insights">
+        <div><span class="num" aria-hidden="true">1</span><h3>Payments and responses are recurring pain points.</h3><p>Tracking who has paid and getting people to respond consistently came up as some of the most frustrating parts of organizing.</p></div>
+        <div><span class="num" aria-hidden="true">2</span><h3>Group chats are good for conversation, poor as a source of truth.</h3><p>Important details, responsibilities, payments and reminders get buried in them.</p></div>
+        <div><span class="num" aria-hidden="true">3</span><h3>Organizers want help with follow-through, not another planning app.</h3><p>They weren’t asking for a more complicated itinerary or travel-planning tool. They wanted help making sure things actually got done.</p></div>
+      </div>
+    </div></section>
+
+    <section class="cs-sec"><h2>Product strategy</h2><div class="content">
+      <p>The research set the product’s priorities and its scope.</p>
+      <div class="tbl"><table>
+        <thead><tr><th scope="col">What I heard</th><th scope="col">What I decided</th></tr></thead>
+        <tbody>
+          <tr><td>Payments and responses are recurring pain points</td><td>Made payment status and RSVP tracking central to the product instead of secondary features</td></tr>
+          <tr><td>Group chats bury important details</td><td>One board that shows the group’s overall readiness, with what still needs chasing at the top</td></tr>
+          <tr><td>Organizers want follow-through, not more planning</td><td>Kept ReadyGroup a lightweight coordination board, and left out booking, chat and full trip planning</td></tr>
+        </tbody>
+      </table></div>
+      <p><strong>Pricing model.</strong> The core board is free. Organizer features, payment tracking and reminders, cost $12 per trip, paid once by the organizer.</p>
+    </div>
+      <div class="cs-wide"><div class="fig-row">
+        <figure class="fig"><button class="zoom" type="button" aria-label="Enlarge image: ReadyGroup demo trip board showing a 61% readiness score, outstanding items, attendees and payments"><img src="img/readygroup-dashboard.png" alt="ReadyGroup demo trip board showing a 61% readiness score, outstanding items, attendees and payments" width="975" height="585" loading="lazy" decoding="async"></button><figcaption>The trip board leads with one readiness score and what still needs chasing: missing responses, unpaid shares, unassigned tasks. Names and amounts are sample demo data.</figcaption></figure>
+        <figure class="fig"><button class="zoom" type="button" aria-label="Enlarge image: ReadyGroup responsibilities list with owners and due dates, and a group packing checklist"><img src="img/readygroup-responsibilities.png" alt="ReadyGroup responsibilities list with owners and due dates, and a group packing checklist" width="975" height="630" loading="lazy" decoding="async"></button><figcaption>Responsibilities with owners, due dates and status, plus the group packing checklist, from the same demo trip (sample data).</figcaption></figure>
+      </div></div>
+    </section>
+
+    <section class="cs-sec"><h2>Marketing experiments</h2><div class="content">
+      <p>The research showed the problem is real for the organizers I spoke with. It hasn’t yet shown that they’ll pay to solve it, so that’s what I’m testing next.</p>
+      <div class="insights">
+        <div><span class="num" aria-hidden="true">A</span><h3>Pricing test</h3><p>Will organizers pay $12 per trip for payment tracking and reminders? The checkout is built and still in test mode.</p></div>
+        <div><span class="num" aria-hidden="true">B</span><h3>Demand test</h3><p>Planned: a Meta lead-ad campaign to gauge interest from group trip organizers before a wider launch.</p></div>
+      </div>
+      <p class="muted" style="font-size:15.5px">No results yet. I’ll update this section when there’s data.</p>
+    </div></section>
+
+    <section class="cs-sec"><h2>What this shows</h2><div class="content">
+      <ul>
+        <li><strong>Customer discovery:</strong> running conversations that uncover real problems rather than confirm what I already believed</li>
+        <li><strong>Research into strategy:</strong> using what people said to decide what to build, and what to leave out</li>
+        <li><strong>Testing assumptions:</strong> being clear about what has been validated and what still needs testing</li>
+      </ul>
+    </div></section>
+
+    <section class="cs-sec"><h2>Skills</h2><div class="content">
+      <ul class="tags"><li>Customer Discovery</li><li>Customer Interviews</li><li>Research Synthesis</li><li>Product Strategy</li><li>Pricing</li><li>Marketing Experimentation</li><li>MVP Development</li><li>Business Development</li></ul>
+    </div></section>
+
+    <nav class="next" aria-label="Next project"><span class="eyebrow">Next case study</span><a class="big" href="#crescordia">Crescordia Business Strategy →</a></nav>
+  </div>
+</article>
+
+<!-- ============ CRESCORDIA ============ -->
+<article class="view" data-view="crescordia" hidden>
+  <div class="wrap">
+    <header class="cs-head">
+      <a class="back" href="#work">← All projects</a>
+      <span class="eyebrow">University of Washington Bothell · Academic case study</span>
+      <h1 tabindex="-1">Crescordia Business Strategy Case Study</h1>
+      <p class="sub">Competitive analysis and strategic evaluation for a medical technology company</p>
+      <p class="note">This was an academic case analysis completed for coursework, not a consulting engagement.</p>
+      <div class="glance">
+        <div><div class="w">Medical technology</div><div class="t">Industry</div></div>
+        <div><div class="w">Five Forces, VRIO, SWOT, decision matrix</div><div class="t">Frameworks</div></div>
+        <div><div class="n">4</div><div class="t">strategic options evaluated</div></div>
+        <div><div class="n">25</div><div class="t">top score: scientific testing</div></div>
+      </div>
+    </header>
+
+    <section class="cs-sec"><h2>Business challenge</h2><div class="content">
+      <p class="lede">Crescordia faced pressure on product quality, innovation, competition, and the direction of its future products.</p>
+      <p>The question was which strategy would best improve its position over the long term.</p>
+    </div></section>
+
+    <section class="cs-sec"><h2>My contributions</h2><div class="content">
+      <ul class="contrib">
+        <li>Assessed the industry with Porter’s Five Forces and the company with VRIO and SWOT</li>
+        <li>Proposed a fourth strategy, scientific testing for innovative material, alongside the case’s options</li>
+        <li>Built and scored a decision matrix comparing all four options on seven criteria</li>
+        <li>Wrote the final recommendation</li>
+      </ul>
+    </div></section>
+
+    <section class="cs-sec"><h2>Competitive analysis</h2><div class="content">
+      <p>I looked at the company from the industry level down to its own resources:</p>
+      <ul>
+        <li><strong>Porter’s Five Forces</strong> to assess competitive pressure in the industry</li>
+        <li><strong>VRIO</strong> to identify which resources could support a lasting advantage</li>
+        <li><strong>SWOT</strong> to summarize internal strengths and weaknesses alongside external opportunities and threats</li>
+        <li><strong>Competitive analysis</strong> to compare Crescordia against others in its market</li>
+      </ul>
+    </div>
+      <div class="cs-wide"><div class="fig-row">
+        <figure class="fig"><button class="zoom" type="button" aria-label="Enlarge image: Porter’s Five Forces model for Crescordia: entry threats, supplier pricing, buyer power of doctors and surgeons, and substitution with competitor Innostat"><img src="img/crescordia-five-forces.png" alt="Porter’s Five Forces model for Crescordia: entry threats, supplier pricing, buyer power of doctors and surgeons, and substitution with competitor Innostat" width="550" height="534" loading="lazy" decoding="async"></button><figcaption>Porter’s Five Forces: the key players and underlying drivers in Crescordia’s industry.</figcaption></figure>
+        <figure class="fig"><button class="zoom" type="button" aria-label="Enlarge image: SWOT analysis for Crescordia listing strengths, weaknesses, opportunities and threats"><img src="img/crescordia-swot.png" alt="SWOT analysis for Crescordia listing strengths, weaknesses, opportunities and threats" width="574" height="422" loading="lazy" decoding="async"></button><figcaption>SWOT analysis: Crescordia’s industry reputation against the challenge of making high-quality resorbables.</figcaption></figure>
+      </div></div>
+    </section>
+
+    <section class="cs-sec"><h2>Strategic evaluation</h2><div class="content">
+      <p>I evaluated four strategies against seven equally weighted criteria: reputation, implementation cost, competitive advantage, market share, customer satisfaction, product quality, and future sales.</p>
+      <p>Each score is signed: a plus for a positive impact on the company’s future and a minus for a negative one, rated 1 to 5 by how large the impact is. A strategy’s total is the sum of its seven scores.</p>
+    </div>
+      <div class="cs-wide"><div class="feature-fig">
+        <div><p class="eyebrow">Decision matrix · primary analysis</p><h3>How the four strategies scored</h3></div>
+        <figure class="fig wide-scroll"><div class="scroller"><button class="zoom" type="button" aria-label="Enlarge image: Crescordia decision matrix scoring four strategies on reputation, implementation cost, competitive advantage, market share, customer satisfaction, product quality and future sales, with totals of 2, 3, 13 and 25"><img src="img/crescordia-decision-matrix.png" alt="Crescordia decision matrix scoring four strategies on reputation, implementation cost, competitive advantage, market share, customer satisfaction, product quality and future sales, with totals of 2, 3, 13 and 25" width="936" height="424" loading="lazy" decoding="async"></button></div><figcaption>The full decision matrix from my analysis. (+) is a positive impact and (−) a negative impact on the company’s future; totals are the sum of the seven scores. The Target Pediatric Market First total is shown as 3, corrected from the 5 listed in my original report so that it matches the row’s scores.</figcaption></figure>
+        <p class="explain"><strong>Scientifically Test for Innovative Material</strong> earned the highest total, 25, against 13 for the next-best option. Testing takes time and money, so it scored −2 on implementation cost, but it rated +5 on reputation, competitive advantage and future sales, and +4 on market share, customer satisfaction and product quality. That made it the strongest route to the differentiation Crescordia needed, and it became my recommendation.</p>
+      </div></div>
+    </section>
+
+    <section class="cs-sec"><h2>Recommendation</h2><div class="content">
+      <p class="pull">Invest in <em>scientific testing and R&amp;D</em> for innovative resorbable materials.</p>
+      <p>It scored 25 in the decision matrix, well ahead of the next option at 13, and it addressed the company’s core issue: improving product quality while building differentiation that could be harder for competitors to copy.</p>
+      <p><strong>Trade-offs I weighed.</strong> These were academic judgments in my report, not tested outcomes:</p>
+      <ul>
+        <li><strong>Testing costs:</strong> scientific testing and clinical trials would cost money, and the number of trials needed was unknown, which is why it scored −2 on implementation cost.</li>
+        <li><strong>Uncertain timelines:</strong> there was no firm end date for testing, and protecting Crescordia’s premium reputation during a long testing period would be a challenge.</li>
+        <li><strong>Product quality:</strong> independent scientific testing could show that the products work and support a high quality standard.</li>
+        <li><strong>Competitive differentiation:</strong> tested, proven materials could set Crescordia apart, though I expected competitors to try to copy the approach or compete on price.</li>
+      </ul>
+      <p class="muted" style="font-size:15.5px">Because this was an academic case, these benefits are projected rather than measured: better product quality, stronger differentiation, and long-term competitive positioning.</p>
+    </div></section>
+
+    <section class="cs-sec"><h2>What this shows</h2><div class="content">
+      <ul>
+        <li><strong>Competitive analysis:</strong> assessing an industry and a company’s position with established frameworks</li>
+        <li><strong>Structured evaluation:</strong> comparing every option against the same criteria instead of arguing for a favorite</li>
+        <li><strong>Weighing trade-offs:</strong> recommending an option with a real cost because it was strongest overall</li>
+      </ul>
+    </div></section>
+
+    <section class="cs-sec"><h2>Skills</h2><div class="content">
+      <ul class="tags"><li>Competitive Analysis</li><li>Strategic Evaluation</li><li>Decision Analysis</li><li>Business Strategy</li><li>SWOT</li><li>VRIO</li><li>Porter’s Five Forces</li><li>Strategic Recommendations</li></ul>
+    </div></section>
+
+    <nav class="next" aria-label="Next project"><span class="eyebrow">Next case study</span><a class="big" href="#retail">Retail Industry Financial Analysis →</a></nav>
+  </div>
+</article>
+
+<!-- ============ RETAIL ============ -->
+<article class="view" data-view="retail" hidden>
+  <div class="wrap">
+    <header class="cs-head">
+      <a class="back" href="#work">← All projects</a>
+      <span class="eyebrow">University of Washington Bothell · Team academic project · Spring 2023</span>
+      <h1 tabindex="-1">Retail Industry Financial Analysis</h1>
+      <p class="sub">Financial ratio analysis and comparative research: Walmart against its competitors and the industry</p>
+      <p class="note">A team project analyzing five retailers. Walmart was my assigned company: the Walmart analysis below is my work, and the overall comparison reflects the team’s combined report. All figures are as reported in the Spring 2023 assignment and have not been independently verified.</p>
+      <div class="glance">
+        <div><div class="n">5</div><div class="t">retailers compared</div></div>
+        <div><div class="w">Walmart Inc.</div><div class="t">My assigned company</div></div>
+        <div><div class="w">Student financial analyst, team member</div><div class="t">My role</div></div>
+        <div><div class="w">Q4 2022</div><div class="t">Earnings call analyzed</div></div>
+      </div>
+    </header>
+
+    <section class="cs-sec"><h2>Objective</h2><div class="content">
+      <p class="lede">Compare five major retailers, measure each against competitors and industry averages, and find the trends, risks, and opportunities.</p>
+      <p>Companies: Walmart, Nordstrom, TJ Maxx, Gap, and Target. The team worked from financial statements, industry benchmarks, competitor comparisons, and earnings call research.</p>
+    </div></section>
+
+    <section class="cs-sec"><h2>My contributions</h2><div class="content">
+      <ul class="contrib">
+        <li>Prepared Walmart’s financial summary, comparing 2022 results with 2021</li>
+        <li>Researched industry ratios and compared Walmart’s quick ratio, profit margin and capital intensity with Dollar Tree, Target and an industry average</li>
+        <li>Analyzed Walmart’s Q4 2022 earnings call</li>
+        <li>Contributed the Walmart analysis to the team’s five-company report</li>
+      </ul>
+    </div></section>
+
+    <section class="cs-sec"><h2>Business performance</h2><div class="content">
+      <p>Walmart’s results year over year: revenue, EBIT, net income, assets, debt, cash flow and diluted EPS.</p>
+    </div>
+      <div class="cs-wide">
+        <figure class="fig fin-fig">
+          <div class="tbl fin"><table aria-describedby="fin-note">
+            <caption>Walmart Inc. financial summary ($ in millions, except diluted EPS)</caption>
+            <thead><tr><th scope="col">Metric</th><th scope="col" class="num">2022</th><th scope="col" class="num">2021</th><th scope="col" class="num">Change</th></tr></thead>
+            <tbody>
+            <tr><th scope="row">Revenue</th><td class="num">$572,754</td><td class="num">$559,151</td><td class="num chg up"><span class="arr" aria-hidden="true">▲</span> +2.43%<span class="sr"> (increase)</span></td></tr>
+            <tr><th scope="row">EBIT</th><td class="num">$20,428</td><td class="num">$25,942</td><td class="num chg down"><span class="arr" aria-hidden="true">▼</span> −21.26%<span class="sr"> (decrease)</span></td></tr>
+            <tr><th scope="row">Net Income</th><td class="num">$13,673</td><td class="num">$13,510</td><td class="num chg up"><span class="arr" aria-hidden="true">▲</span> +1.21%<span class="sr"> (increase)</span></td></tr>
+            <tr><th scope="row">Total Assets</th><td class="num">$244,860</td><td class="num">$252,496</td><td class="num chg down"><span class="arr" aria-hidden="true">▼</span> −3.02%<span class="sr"> (decrease)</span></td></tr>
+            <tr><th scope="row">Total Debt</th><td class="num">$87,379</td><td class="num">$92,645</td><td class="num chg down"><span class="arr" aria-hidden="true">▼</span> −5.68%<span class="sr"> (decrease)</span></td></tr>
+            <tr><th scope="row">Cash and Equivalents</th><td class="num">$14,760</td><td class="num">$17,431</td><td class="num chg down"><span class="arr" aria-hidden="true">▼</span> −15.32%<span class="sr"> (decrease)</span></td></tr>
+            <tr><th scope="row">Cash from Operations</th><td class="num">$24,181</td><td class="num">$36,074</td><td class="num chg down"><span class="arr" aria-hidden="true">▼</span> −32.97%<span class="sr"> (decrease)</span></td></tr>
+            <tr><th scope="row">Cash from Investing</th><td class="num">−$6,015</td><td class="num">−$10,071</td><td class="num chg down"><span class="arr" aria-hidden="true">▼</span> −40.27%<span class="sr"> (decrease)</span></td></tr>
+            <tr><th scope="row">Cash from Financing</th><td class="num">−$22,828</td><td class="num">−$16,117</td><td class="num chg up"><span class="arr" aria-hidden="true">▲</span> +41.64%<span class="sr"> (increase)</span></td></tr>
+            <tr><th scope="row">Diluted EPS</th><td class="num">$4.87</td><td class="num">$4.75</td><td class="num chg up"><span class="arr" aria-hidden="true">▲</span> +2.53%<span class="sr"> (increase)</span></td></tr>
+            </tbody>
+          </table></div>
+          <figcaption id="fin-note">Dollar amounts are in millions, except diluted EPS. ▲ marks an increase and ▼ a decrease; for cash from investing and financing, the change compares the size of each outflow. These are historical figures from my Spring 2023 academic report, with percentage changes recalculated; they have not been independently verified.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="cs-sec"><h2>Ratio analysis</h2><div class="content">
+      <p>Walmart’s ratios as calculated in the report, benchmarked against Dollar Tree, Target and the industry average used in the project:</p>
+      <div class="stats">
+        <div class="stat"><span class="k">Quick ratio</span><span class="n">1.54</span><p>Stronger short-term liquidity than the comparison companies in the report</p></div>
+        <div class="stat"><span class="k">Profit margin</span><span class="n">2.39%</span><p>Below the industry average used in the project</p></div>
+        <div class="stat"><span class="k">Capital intensity</span><span class="n">0.43</span><p>Relatively efficient asset utilization against the industry benchmark</p></div>
+      </div>
+    </div>
+      <div class="cs-wide">
+        <figure class="fig"><button class="zoom" type="button" aria-label="Enlarge image: Quick ratio bar chart: Walmart 1.54, Dollar Tree 0.43, Target 0.39, industry average 0.25"><img src="img/walmart-quick-ratio.png" alt="Quick ratio bar chart: Walmart 1.54, Dollar Tree 0.43, Target 0.39, industry average 0.25" width="1660" height="1008" loading="lazy" decoding="async"></button><figcaption>Quick ratio for Walmart against two competitors and the industry average used in the report. Figures reproduced from my Spring 2023 assignment; historical project work, not independently verified.</figcaption></figure>
+        <figure class="fig"><button class="zoom" type="button" aria-label="Enlarge image: Profit margin bar chart: Walmart 2.39%, Dollar Tree 5.04%, Target 2.55%, industry average 3.50%"><img src="img/walmart-profit-margin.png" alt="Profit margin bar chart: Walmart 2.39%, Dollar Tree 5.04%, Target 2.55%, industry average 3.50%" width="1620" height="1008" loading="lazy" decoding="async"></button><figcaption>Profit margin (net income ÷ sales) for Walmart against two competitors and the industry average used in the report. Figures reproduced from my Spring 2023 assignment; historical project work, not independently verified.</figcaption></figure>
+        <figure class="fig"><button class="zoom" type="button" aria-label="Enlarge image: Capital intensity table and bar chart: Walmart 0.43, Dollar Tree 0.83, Target 0.51, industry average 2.50"><img src="img/walmart-capital-intensity.png" alt="Capital intensity table and bar chart: Walmart 0.43, Dollar Tree 0.83, Target 0.51, industry average 2.50" width="890" height="985" loading="lazy" decoding="async"></button><figcaption>Capital intensity (total assets ÷ sales) for Walmart against two competitors and the industry average used in the report. Figures reproduced from my Spring 2023 assignment; historical project work, not independently verified.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="cs-sec"><h2>Key takeaways</h2><div class="content">
+      <p>From the report’s analysis:</p>
+      <div class="insights">
+        <div><span class="num" aria-hidden="true">1</span><h3>Liquidity was a strength.</h3><p>A quick ratio of 1.54 pointed to stronger short-term liquidity than the comparison companies in the report.</p></div>
+        <div><span class="num" aria-hidden="true">2</span><h3>Margins were thin.</h3><p>A 2.39% profit margin sat below the industry average used in the project.</p></div>
+        <div><span class="num" aria-hidden="true">3</span><h3>Assets were used efficiently.</h3><p>A capital intensity ratio of 0.43 suggested relatively efficient asset utilization against the industry benchmark.</p></div>
+        <div><span class="num" aria-hidden="true">4</span><h3>The earnings call added context.</h3><p>Walmart’s Q4 2022 call focused on general merchandise, pricing and customer value, and the effects of inflation on the business.</p></div>
+      </div>
+    </div></section>
+
+    <section class="cs-sec"><h2>What this shows</h2><div class="content">
+      <ul>
+        <li><strong>Financial ratio analysis:</strong> calculating and interpreting liquidity, profitability and asset-use ratios</li>
+        <li><strong>Comparative research:</strong> reading a company’s numbers against competitors and an industry average</li>
+        <li><strong>Performance evaluation:</strong> pairing the numbers with management’s own commentary from the earnings call</li>
+      </ul>
+    </div></section>
+
+    <section class="cs-sec"><h2>Skills</h2><div class="content">
+      <ul class="tags"><li>Financial Ratio Analysis</li><li>Comparative Research</li><li>Performance Evaluation</li><li>Financial Statements</li><li>Earnings Call Research</li><li>Excel</li><li>Team Collaboration</li></ul>
+    </div></section>
+
+    <nav class="next" aria-label="Next project"><span class="eyebrow">Next case study</span><a class="big" href="#readygroup">Customer Research &amp; Business Development →</a></nav>
+  </div>
+</article>
+
+<!-- ============ ABOUT ============ -->
+<div class="view" data-view="about" hidden>
+  <div class="wrap">
+    <div class="about-hero">
+      <div>
+        <p class="eyebrow">About</p>
+        <h1 tabindex="-1">Hi, I’m Alissa.</h1>
+        <div class="story">
+          <p>My career started in customer-facing roles, and working with customers every day made me curious about the business side of what I was seeing.</p>
+          <p>Why do people choose one option over another? What makes them buy, or come back? How much can a small change in communication shape someone’s whole experience?</p>
+          <p>My business degree and MBA have given me a way to dig into those questions. Through coursework in marketing, customer research, financial analysis, business strategy, and entrepreneurship, I’ve learned to back up what I notice with research and analysis, and to turn it into recommendations.</p>
+          <p>Now I’m looking for a role where I can bring those pieces together: understanding customers, communicating clearly, researching and analyzing, and solving real business problems.</p>
+        </div>
+      </div>
+      <aside class="roles">
+        <img class="portrait" src="img/alissa-starling.webp" alt="Alissa Starling" width="132" height="132">
+        <p class="eyebrow">Roles I’m pursuing</p>
+        <ul>
+          <li>Marketing</li><li>Business Analyst</li><li>Business Strategy</li><li>Product Marketing</li><li>Customer Insights</li>
+          <li>Business Development</li><li>Customer Success</li><li>Account Management</li><li>Business Operations</li>
+        </ul>
+        <p>The common thread is understanding customers and using that understanding to help a business make better decisions.</p>
+      </aside>
+    </div>
+
+    <section class="block" style="padding-top:0;border-top:0">
+      <div class="sec-head"><div><p class="eyebrow">Experience</p><h2>Where I’ve worked</h2></div></div>
+      <div class="job">
+        <p class="when">Nov 2021 to Present<br>Bellevue, WA</p>
+        <div>
+          <h3>Front Desk Receptionist</h3>
+          <p class="where">Yuan Spa</p>
+          <div class="content">
+            <p style="color:var(--muted)">I work where customers, service providers, and the business meet.</p>
+            <ul style="margin-top:14px">
+              <li><strong>Customer communication</strong> with 50+ customers daily</li>
+              <li>Contributed to approximately 4–6% monthly retail and membership sales growth through personalized recommendations and consultative customer conversations.</li>
+              <li><strong>CRM and systems:</strong> Booker POS and Mindbody CRM for scheduling and customer records</li>
+              <li><strong>Marketing outreach:</strong> Milo SMS Marketing for appointment reminders, promotions, and membership outreach</li>
+              <li><strong>Coordination</strong> between customers and service providers</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="job small">
+        <p class="when">2020 to 2021<br>Monroe, WA</p>
+        <div>
+          <h3>E-Commerce Associate</h3>
+          <p class="where">Fred Meyer</p>
+          <div class="content">
+            <ul>
+              <li>Completed 30+ online customer orders per shift accurately, against time-sensitive deadlines</li>
+              <li>Resolved inventory issues and communicated substitutions to customers</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="sec-head"><div><p class="eyebrow">Education</p><h2>What I’ve studied</h2></div></div>
+      <div class="edu">
+        <div><h3>Master of Business Administration</h3><p>William Jewell College (One Day)</p><p class="muted">Expected 2027</p></div>
+        <div><h3>BA in Business Administration</h3><p>University of Washington Bothell</p><p class="muted">2025</p></div>
+      </div>
+      <div class="course">
+        <p class="eyebrow" style="color:var(--muted);margin-bottom:12px">Relevant coursework</p>
+        <ul class="tags"><li>Marketing Management</li><li>Consumer Marketing</li><li>E-Marketing</li><li>Entrepreneurial Marketing</li><li>Operations &amp; Project Management</li><li>Business Writing</li><li>Business Finance</li><li>Business Policy &amp; Strategic Management</li></ul>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="sec-head"><div><p class="eyebrow">Skills</p><h2>What I work with</h2></div></div>
+      <ul class="skills"><li>Customer Research</li><li>Market Research</li><li>Business Analysis</li><li>Competitive Analysis</li><li>Marketing Support</li><li>Project Coordination</li><li>Data Analysis</li><li>Microsoft Excel</li><li>CRM Systems</li><li>Communication</li></ul>
+      <p class="tools">Tools: Microsoft Excel · Microsoft Office · Booker POS · Mindbody CRM · Milo SMS Marketing · Salesforce (familiar)</p>
+      <div class="btns" style="margin-top:36px"><a class="btn btn-primary" href="#work">View My Work</a><a class="btn btn-ghost" href="#cv">View Resume</a></div>
+    </section>
+  </div>
+</div>
+<!-- ============ RESUME VIEW ============ -->
+<div class="view" data-view="cv" hidden>
+  <div class="wrap cv">
+    <a class="back" href="#resume">← Back</a>
+    <div class="cv-head">
+      <div><p class="eyebrow">Resume</p><h1 tabindex="-1">Alissa Starling</h1></div>
+      <div class="cv-actions">
+        <a class="btn btn-primary dl-resume" href="Alissa_Starling_Resume.pdf" download>Download PDF</a>
+        <p class="dl-msg muted" role="status"></p>
+      </div>
+    </div>
+    <figure class="sheet"><img src="img/resume-preview.png" alt="Alissa Starling's one-page resume: education, professional summary, experience at Yuan Spa and Fred Meyer, three projects including ReadyGroup (in progress), and skills." width="1445" height="1870" decoding="async"></figure>
+  </div>
+</div>
+</main>
+
+<dialog class="lightbox" aria-label="Enlarged image">
+  <button class="lb-close" type="button" aria-label="Close">✕</button>
+  <div class="lb-inner"><img alt=""><p></p></div>
+</dialog>
+
+<footer>
+  <div class="wrap">
+    <span>Alissa Starling · MBA Candidate</span>
+    <span><a href="https://www.linkedin.com/in/alissa-starling" target="_blank" rel="noopener">LinkedIn</a> · starlingalissam@gmail.com</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var views = document.querySelectorAll('.view');
+  var pages = ['readygroup', 'crescordia', 'retail', 'about', 'cv'];
+  var navLinks = document.querySelectorAll('[data-nav]');
+  var routed = false;
+  document.documentElement.lang = 'en';
+  function route() {
+    var h = (location.hash || '#home').slice(1);
+    if (h === 'main') { var cur = document.querySelector('.view:not([hidden])'); var f = cur && cur.querySelector('h1'); if (f) f.focus(); return; }
+    var page = pages.indexOf(h) > -1 ? h : 'home';
+    views.forEach(function (v) { v.hidden = v.dataset.view !== page; });
+    var active = page === 'home' ? (['work', 'resume', 'contact'].indexOf(h) > -1 ? h : 'home') : (page === 'about' ? 'about' : page === 'cv' ? 'resume' : 'work');
+    navLinks.forEach(function (a) { a.setAttribute('aria-current', a.dataset.nav === active ? 'true' : 'false'); });
+    var target = page === 'home' && h !== 'home' ? document.getElementById(h) : null;
+    if (target) { requestAnimationFrame(function () { target.scrollIntoView(); }); }
+    else { window.scrollTo(0, 0); }
+    if (routed && !target) { var hd = document.querySelector('.view[data-view="' + page + '"] h1'); if (hd) hd.focus({ preventScroll: true }); }
+    routed = true;
+    var titles = { readygroup: 'ReadyGroup Case Study', crescordia: 'Crescordia Case Study', retail: 'Retail Financial Analysis', about: 'About', cv: 'Resume' };
+    document.title = titles[page] ? titles[page] + ' · Alissa Starling' : 'Alissa Starling';
+  }
+  document.querySelector('.skip').addEventListener('click', function (e) {
+    e.preventDefault();
+    var cur = document.querySelector('.view:not([hidden])'); var f = cur && cur.querySelector('h1'); if (f) f.focus();
+  });
+  window.addEventListener('hashchange', route);
+  route();
+
+  // Resume download: inside the Claude viewer, hand the PDF over through the downloads capability; elsewhere the plain link works.
+  document.querySelectorAll('.dl-resume').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      if (!window.claude || !window.claude.use) return;
+      e.preventDefault();
+      var msg = link.closest('.panel, .cv-actions').querySelector('.dl-msg');
+      msg.textContent = '';
+      Promise.all([window.claude.use('downloads'), fetch(link.getAttribute('href')).then(function (r) { return r.blob(); })])
+        .then(function (res) {
+          if (!res[0]) { msg.textContent = 'Downloading isn’t available in this view. You can still read the resume on this page.'; return; }
+          return res[0].save({ filename: 'Alissa_Starling_Resume.pdf', data: res[1] }).catch(function (err) {
+            if (err && err.code === 'declined') return;
+            msg.textContent = err && err.code === 'rate_limited' ? 'A download prompt is already open.' : 'The download didn’t start. Please try again.';
+          });
+        })
+        .catch(function () { msg.textContent = 'The download didn’t start. Please try again.'; });
+    });
+  });
+
+  // Click a project visual to see it larger. Closes with ✕, Esc, or a tap outside the image.
+  var lb = document.querySelector('.lightbox');
+  var lbImg = lb.querySelector('img'), lbCap = lb.querySelector('p');
+  document.querySelectorAll('.zoom').forEach(function (z) {
+    z.addEventListener('click', function () {
+      var img = z.querySelector('img');
+      var w = img.naturalWidth || +img.getAttribute('width'), h = img.naturalHeight || +img.getAttribute('height');
+      lbImg.src = img.currentSrc || img.src; lbImg.alt = img.alt;
+      lbImg.style.setProperty('--ar', w / h); lbImg.style.setProperty('--nw', w);
+      var cap = z.parentNode.querySelector('figcaption');
+      lbCap.textContent = cap ? cap.textContent : '';
+      if (lb.showModal) { lb.showModal(); } else { window.open(lbImg.src, '_blank'); }
+    });
+  });
+  lb.addEventListener('click', function (e) { if (e.target !== lbImg) lb.close(); });
+
+  var btn = document.getElementById('copy-email');
+  btn.addEventListener('click', function () {
+    var text = document.getElementById('email').textContent;
+    function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById('email'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    }
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+  });
+})();
+</script>
+
+</body></html>
